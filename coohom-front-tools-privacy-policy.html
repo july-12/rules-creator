@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coohom Front Tools Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6efe6;
+      --card: #fffdfa;
+      --text: #241b14;
+      --muted: #75675c;
+      --line: #eadfd4;
+      --accent: #b45309;
+      --accent-soft: #fff1e5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(180, 83, 9, 0.1), transparent 34%),
+        linear-gradient(180deg, #fffaf5 0%, var(--bg) 100%);
+      line-height: 1.68;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #c05621 0%, #9a3412 100%);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 20px 60px rgba(154, 52, 18, 0.2);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 16px;
+    }
+
+    .meta {
+      margin-top: 14px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(234, 223, 212, 0.95);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 14px 38px rgba(51, 27, 12, 0.08);
+    }
+
+    h2 {
+      margin: 28px 0 12px;
+      font-size: 22px;
+      color: #1f140c;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 18px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      padding: 14px 16px;
+      border-radius: 12px;
+      color: #7c2d12;
+      margin: 18px 0 24px;
+    }
+
+    .contact {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact strong {
+      display: inline-block;
+      min-width: 90px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 24px 14px 40px;
+      }
+
+      .hero,
+      .card {
+        padding: 22px 18px;
+        border-radius: 18px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Coohom Front Tools Privacy Policy</h1>
+      <p>
+        This Privacy Policy explains how the Coohom Front Tools Chrome extension processes
+        information when users analyze the current Coohom page or inspect a selected page element
+        to identify pub app and repository ownership.
+      </p>
+      <div class="meta">Effective date: April 19, 2026</div>
+    </section>
+
+    <section class="card">
+      <div class="note">
+        Coohom Front Tools is designed for ownership lookup on supported Coohom pages. It works
+        only when users actively trigger page analysis or element inspection.
+      </div>
+
+      <h2>1. Information We Process</h2>
+      <p>When you use the extension, the following information may be processed:</p>
+      <ul>
+        <li>The `pub token` that you provide in the extension settings.</li>
+        <li>The URL of the current page.</li>
+        <li>Related static resource URLs from the current page, such as stylesheet and script URLs.</li>
+        <li>Selected element context needed for ownership lookup, such as tag name, id, class name, ancestry, text snippet, and matched resource hints.</li>
+      </ul>
+
+      <h2>2. How We Use Information</h2>
+      <p>We use this information only to provide the extension's ownership lookup functionality, including:</p>
+      <ul>
+        <li>Analyzing the current page to identify the related pub app and repository.</li>
+        <li>Inspecting a selected page element to infer its ownership.</li>
+        <li>Sending authenticated requests to the configured PUB MCP endpoint.</li>
+      </ul>
+
+      <h2>3. Data Storage and Transmission</h2>
+      <ul>
+        <li>The extension stores `pub token` in Chrome extension storage so the user does not need to enter it repeatedly.</li>
+        <li>Temporary tab analysis state may be stored in Chrome session storage during use.</li>
+        <li>`pub token` and ownership lookup context are sent only to the configured PUB MCP endpoint as needed for the extension's core functionality.</li>
+      </ul>
+
+      <h2>4. Permissions</h2>
+      <p>The extension requests only the permissions required to deliver its single purpose:</p>
+      <ul>
+        <li><strong>activeTab</strong>: to inspect the currently active tab after user interaction.</li>
+        <li><strong>storage</strong>: to store `pub token` and related extension settings.</li>
+        <li><strong>Host permissions</strong>: limited to supported Coohom pages, required static asset domains, and the configured PUB MCP endpoint used for ownership lookup.</li>
+      </ul>
+
+      <h2>5. Data Sharing</h2>
+      <p>
+        We do not sell, rent, or share your data with unrelated third parties. Information is processed
+        only as required to support the extension's ownership lookup functionality.
+      </p>
+
+      <h2>6. What We Do Not Do</h2>
+      <ul>
+        <li>We do not execute remote JavaScript or other remote code.</li>
+        <li>We do not access GitLab APIs.</li>
+        <li>We do not collect unrelated page content beyond what is needed for ownership lookup.</li>
+        <li>We do not use extension data for advertising, profiling, analytics, or cross-site tracking.</li>
+      </ul>
+
+      <h2>7. Security Note</h2>
+      <p>
+        The current repository default is an internal `http://` PUB MCP endpoint intended for internal
+        environments. Before any public distribution that requires secure transport, the configured PUB
+        MCP endpoint should be replaced with an `https://` endpoint.
+      </p>
+
+      <h2>8. Your Choices</h2>
+      <p>
+        You may stop using the extension at any time. You may also update or remove the stored `pub token`,
+        clear browser extension storage, or uninstall the extension.
+      </p>
+
+      <h2>9. Contact</h2>
+      <div class="contact">
+        <p><strong>Company:</strong> coohom</p>
+        <p><strong>Support:</strong> Contact the extension maintainer through your internal project support channel.</p>
+      </div>
+
+      <p class="footer">If this Privacy Policy is updated, the revised version will be published on this page.</p>
+    </section>
+  </main>
+</body>
+</html>
